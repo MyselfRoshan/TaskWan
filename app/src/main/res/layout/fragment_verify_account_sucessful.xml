@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerifyAccountSucessful">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/verify_account"
+            android:fontFamily="@font/poppins_500"
+            android:textSize="14sp"
+            android:textColor="@color/black_900"
+            android:textAlignment="center"
+            android:paddingTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="36dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/verify_account2"
+                android:contentDescription="@string/verify_account" />
+        </LinearLayout>
+
+        <TextView
+            android:maxWidth="142dp"
+            android:layout_width="142dp"
+            android:layout_marginBottom="70dp"
+            android:textSize="12sp"
+            android:textColor="@color/black_900"
+            android:fontFamily="@font/poppins_500"
+            android:layout_height="wrap_content"
+            android:text="@string/your_account_has_been_verified_successfully"
+            android:textAlignment="center" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/go_to_dashboard_btn"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:background="@drawable/all_corners"
+            android:textColor="@color/white"
+            android:text="@string/go_to_dashboard"
+            android:fontFamily="@font/poppins_400"
+            android:textAllCaps="false"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</FrameLayout>

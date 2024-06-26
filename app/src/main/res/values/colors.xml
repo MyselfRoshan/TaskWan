@@ -10,7 +10,9 @@
     <color name="primary_1000_10">#1A006EE9</color>
     <color name="primary_500">#87ADF4</color>
     <color name="black">#FF000000</color>
+    <color name="black_900">#474747</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_000">#00FFFFFF</color>
 
     <color name="gray_slate">#FFA4A4A4</color>
     <color name="gray">#FFC6C2C2</color>

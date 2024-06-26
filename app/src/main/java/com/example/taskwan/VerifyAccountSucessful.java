@@ -10,10 +10,10 @@ import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LoginForm#newInstance} factory method to
+ * Use the {@link VerifyAccountSucessful#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LoginForm extends Fragment {
+public class VerifyAccountSucessful extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class LoginForm extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public LoginForm() {
+    public VerifyAccountSucessful() {
         // Required empty public constructor
     }
 
@@ -34,11 +34,11 @@ public class LoginForm extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment LoginForm.
+     * @return A new instance of fragment VerifyAccountSucessful.
      */
     // TODO: Rename and change types and number of parameters
-    public static LoginForm newInstance(String param1, String param2) {
-        LoginForm fragment = new LoginForm();
+    public static VerifyAccountSucessful newInstance(String param1, String param2) {
+        VerifyAccountSucessful fragment = new VerifyAccountSucessful();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,20 +59,21 @@ public class LoginForm extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View loginView = inflater.inflate(R.layout.fragment_login_form, container, false);
-        TextView signupBtn = (TextView) loginView.findViewById(R.id.signup_btn);
-        if (signupBtn != null) {
-            signupBtn.setOnClickListener(new View.OnClickListener() {
+        View verifyAccountSucessFul = inflater.inflate(R.layout.fragment_verify_account_sucessful, container, false);
+        TextView goBackToDashboardBtn = (TextView) verifyAccountSucessFul.findViewById(R.id.go_to_dashboard_btn);
+        if (goBackToDashboardBtn != null) {
+            goBackToDashboardBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     getParentFragmentManager()
                             .beginTransaction()
                             .setReorderingAllowed(true)
-                            .replace(R.id.fragment_container_view, SignUpForm.class, null)
+                            .replace(R.id.fragment_container_view, LoginForm.class, null)
                             .commit();
                 }
             });
         }
-        return loginView;
+
+        return verifyAccountSucessFul;
     }
 }

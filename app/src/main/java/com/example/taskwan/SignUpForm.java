@@ -1,12 +1,12 @@
 package com.example.taskwan;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +59,22 @@ public class SignUpForm extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sign_up_form, container, false);
+
+        View signUpView = inflater.inflate(R.layout.fragment_sign_up_form, container, false);
+        TextView registerBtn = (TextView) signUpView.findViewById(R.id.register_btn);
+        if (registerBtn != null) {
+            registerBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    getParentFragmentManager()
+                            .beginTransaction()
+                            .setReorderingAllowed(true)
+                            .replace(R.id.fragment_container_view, VerifyAccount.class, null)
+                            .commit();
+                }
+            });
+        }
+
+        return signUpView;
     }
 }
